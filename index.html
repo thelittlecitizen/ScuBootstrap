@@ -23,55 +23,12 @@
 
             <div class="col-md-7">
                 <div class="row">
-                    <div class="col-md-4 text-center border rounded">
-                        <img src="download.jpg">
-                        <h3>חצוצרה</h3>
-                        <span>חצוצרה ארוכה</span>
-                        <h3>₪1500</h3>
-                        <span>הוספה לעגלה</span>
-                    </div>
-                    <div class="col-md-4 text-center border rounded">
-                        <img src="download1.jpg">
-                        <h3>מפוחית</h3>
-                        <span>מפוחית יפה</span>
-                        <h3>₪35</h3>
-                        <span>הוספה לעגלה</span>
-                    </div>
-                    <div class="col-md-4 text-center border rounded">
-                        <img src="download2.jpg">
-                        <h3>חליל</h3>
-                        <span>חליל יפה</span>
-                        <h3>₪50</h3>
-                        <span>הוספה לעגלה</span>
-                    </div>
-                    <div class="col-md-4 text-center border rounded">
-                        <h2>לא קיימת תמונה</h2>
-                        <h3>כינור2</h3>
-                        <span>כינור קטן</span>
-                        <h3>₪2300</h3>
-                        <span>הוספה לעגלה</span>
-                    </div>
-                    <div class="col-md-4 text-center border rounded">
-                        <img src="download3.jpg">
-                        <h3>קלרינט</h3>
-                        <span>קלרינט רועש</span>
-                        <h3>₪1400</h3>
-                        <span>הוספה לעגלה</span>
-                    </div>
-                    <div class="col-md-4 text-center border rounded">
-                        <img src="download4.jpg">
-                        <h3>טרומבון</h3>
-                        <span>טרומבון קטן</span>
-                        <h3>₪2400</h3>
-                        <span>הוספה לעגלה</span>
-                    </div>
-
 
 
                 </div>
             </div>
 
-            <div class="col-md-3 text-right">
+            <div class="col-md-3 text-right ">
                 <span>סינון</span>
            
                     <div class="dropdown">
@@ -80,12 +37,10 @@
                             סוג כלי נגינה
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">חליל</a>
-                            <a class="dropdown-item" href="#"> מפוחית</a>
-                            <a class="dropdown-item" href="#">  חצוצרה</a>
-                            <a class="dropdown-item" href="#">  טרומבון</a>
-                            <a class="dropdown-item" href="#">  קלרינט</a>
-                            <a class="dropdown-item" href="#">  כינור2</a>
+                            <a class="dropdown-item" onclick="SortType('כלי נשיפה')" href="#">כלי נשיפה</a>
+                            <a class="dropdown-item" onclick="SortType('כלי מיתר')" href="#"> כלי  מיתר</a>
+                            <a class="dropdown-item" onclick="SortType('הכל')" href="#"> הכל  </a>
+
 
 
 
@@ -117,14 +72,6 @@
         </div>
     </div>
 
-
-
-
-
-
-
-
-
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
@@ -134,6 +81,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+
+    <script src ="javascript.js"> </script>
 </body>
 
 </html>
