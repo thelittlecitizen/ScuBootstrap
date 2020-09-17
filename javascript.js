@@ -18,7 +18,7 @@ const array_Instruments = [{
     instrumentsType: {id:1, name:"כלי נשיפה"},
     name:"מפוחית",
     price: 35,
-    typeId:1  
+    typeId:1
 },
 {
     description:"חצוצרה ארוכה ",
@@ -28,7 +28,7 @@ const array_Instruments = [{
     instrumentsType: {id:1, name:"כלי נשיפה"},
     name:"חצוצרה",
     price: 1500,
-    typeId:1  
+    typeId:1
 },
 {
     description:"טרומבון קטן",
@@ -38,7 +38,7 @@ const array_Instruments = [{
     instrumentsType: {id:1, name:"כלי נשיפה"},
     name:"טרומבון",
     price: 2400,
-    typeId:1  
+    typeId:1
 },
 {
     description:" קלרינט רועש",
@@ -48,7 +48,7 @@ const array_Instruments = [{
     instrumentsType: {id:1, name:"כלי נשיפה"},
     name:"קלרינט",
     price: 1400,
-    typeId:1  
+    typeId:1
 },
 {
     description:"כינור קטן ",
@@ -58,10 +58,10 @@ const array_Instruments = [{
     instrumentsType: {id:2, name:"כלי מיתר"},
     name:"כינור2",
     price: 2300,
-    typeId:1  
+    typeId:1
 }
 
-]
+];
 
 function Data()
 {
@@ -81,7 +81,7 @@ function Data()
     var title= document.createElement("h3")
     title.innerText= array_Instruments[i].name
     div1.appendChild(title)
-    
+
     var text = document.createElement("span")
     text.innerText = array_Instruments[i].description
     div1.appendChild(text)
@@ -95,7 +95,7 @@ function Data()
     div1.appendChild(agala)
     }
 
-}
+};
 Data();
 
 function SortType(type)
@@ -103,7 +103,7 @@ function SortType(type)
     for(var i = 0; i<array_Instruments.length; i++)
     {
 
-            document.getElementsByClassName("col-md-4 text-center border rounded")[i].style.display = 'unset'
+            document.getElementsByClassName("col-md-4 text-center border rounded")[i].style.display = 'unset';
 
 
     }
@@ -111,18 +111,18 @@ function SortType(type)
     {
         if(array_Instruments[i].instrumentsType.name != type)
         {
-            document.getElementsByClassName("col-md-4 text-center border rounded")[i].style.display = 'none'
+            document.getElementsByClassName("col-md-4 text-center border rounded")[i].style.display = 'none';
 
         }
         if(type == "הכל")
         {
-            document.getElementsByClassName("col-md-4 text-center border rounded")[i].style.display = 'unset'
+            document.getElementsByClassName("col-md-4 text-center border rounded")[i].style.display = 'unset';
 
         }
-    
+
     }
 
-}
+};
 
 function Search()
 {
@@ -131,35 +131,52 @@ function Search()
     filter = input.value;
 
     console.log("bla");
-  
+
     for (var i = 0; i < array_Instruments.length; i++)
      {
       if (array_Instruments[i].name.indexOf(filter) > -1)
       {
         document.getElementById(i).style.display = "block";
-      } 
-      else 
+      }
+      else
       {
         document.getElementById(i).style.display = "none";
       }
     }
-}
+};
 
-function Price(filter)
-{
-    var checkBox = document.getElementById("checkbox").value;
-    var filter = checkBox.value;
-
-
+ function Price(minfilter,maxfilter)
+ {
     for(var i =0; i<array_Instruments.length; i++)
     {
-        if(array_Instruments[i].price<filter)
-        {
-            document.getElementById(i).style.display = 'block'
-        }
-        else
-        {
-            document.getElementById(i).style.display = 'none'
-        }
+        document.getElementById(i).style.display = 'unset';
+
     }
-}
+
+
+
+     for(var i =0; i<array_Instruments.length; i++)
+      {
+          
+         if(array_Instruments[i].price<maxfilter&&array_Instruments[i].price>=minfilter)
+         {
+             document.getElementById(i).style.display = 'block';
+         }
+        //  if (array_Instruments[i].price>2000)
+        //  {
+        //      document.getElementById(i).style.display = 'block';
+        //  }
+    
+         else
+         {
+             document.getElementById(i).style.display = 'none';
+
+         }
+
+
+     }
+
+     
+ };
+
+
