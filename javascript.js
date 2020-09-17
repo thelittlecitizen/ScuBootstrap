@@ -71,6 +71,7 @@ function Data()
     var div1 = document.createElement ("div")
     div1.className="col-md-4 text-center border rounded"
     div.appendChild(div1)
+    div1.id = i
 
     var img = document.createElement("img")
     img.src = array_Instruments[i].imagePath
@@ -119,10 +120,46 @@ function SortType(type)
 
         }
     
-    
-
-
-
     }
 
+}
+
+function Search()
+{
+    var input, filter, i;
+    input = document.getElementById('search');
+    filter = input.value;
+
+    console.log("bla");
+  
+    for (var i = 0; i < array_Instruments.length; i++)
+     {
+      if (array_Instruments[i].name.indexOf(filter) > -1)
+      {
+        document.getElementById(i).style.display = "block";
+      } 
+      else 
+      {
+        document.getElementById(i).style.display = "none";
+      }
+    }
+}
+
+function Price(filter)
+{
+    var checkBox = document.getElementById("checkbox").value;
+    var filter = checkBox.value;
+
+
+    for(var i =0; i<array_Instruments.length; i++)
+    {
+        if(array_Instruments[i].price<filter)
+        {
+            document.getElementById(i).style.display = 'block'
+        }
+        else
+        {
+            document.getElementById(i).style.display = 'none'
+        }
+    }
 }

@@ -42,17 +42,19 @@
                             <a class="dropdown-item" onclick="SortType('הכל')" href="#"> הכל  </a>
 
 
-
-
                         </div>
                     </div>
 
+                    <div class ="main">
                     <form action="/action_page.php">
-                        <input type="search" placeholder="חיפוש כלי נגינה">
+                        <input type="text" id="search"  placeholder="חיפוש כלי נגינה" onkeyup="Search()">
+                        
                     </form>
+                    </div>
+
 
                     <h5>מחיר</h5>
-                    <input type="checkbox"><br>
+                    <input type="checkbox" id="checkbox" onclick="Price(0,500)"><br>
                     <span>עד 500₪</span><br>
                     <input type="checkbox"><br>
                     <span>₪500-₪1000 </span><br>
